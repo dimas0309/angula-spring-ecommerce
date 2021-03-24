@@ -1,1 +1,1 @@
-# angula-spring-ecommerce
+# angular-spring-boot-ecommerce
