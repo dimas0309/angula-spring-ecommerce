@@ -1,0 +1,17 @@
+<div class="container">
+     <img src="{{product.imageUrl}}">
+     <h3>{{product.name}}</h3>
+     <br>
+     <div class="container">
+        <h4>Description</h4>
+        <p>{{product.description}}</p>
+     </div>
+     <br>
+     <div>{{product.unitPrice | currency:'USD'}}</div>
+     <button class="btn btn-primary"
+             (click)="addToCart()">
+        Add to cart
+      </button>
+</div>
+
+

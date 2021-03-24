@@ -1,0 +1,12 @@
+
+<div>
+    <a routerLink="/cart-details" style="color: white">
+        <div>
+            {{ totalPrice | currency: 'USD' }}
+            <span style="border-left: 2px solid rgb(6, 6, 158); height: 10px">
+                {{ totalQuantity }}
+            </span>
+            <i class="bi bi-cart-fill"></i>
+        </div>
+    </a>
+</div>

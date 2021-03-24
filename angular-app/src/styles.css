@@ -1,0 +1,47 @@
+/* header properties*/
+.header {
+    color:#2f00ff;
+    text-align: center;
+    width: 100%;
+    padding: 2%;
+}
+
+/* sidebar properties*/
+.column {
+    float: left;
+    padding: 10px;
+  }
+  
+  .column.side {
+    background-color: #007bff;
+    color: #ffffff;
+    width: 15%;    
+  }
+  
+  .column.middle {
+    background-color: #ffffff;
+    color:#2f00ff;
+    width: 85%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* footer properties*/
+  .footer {
+    background-color: #2f00ff;
+    color:#00ffd9;
+    padding: 10px;
+    text-align: center;
+  }
+   
+
+/* map properties*/
+#map {
+    width: 60%;
+    height: 200px;
+  }
+

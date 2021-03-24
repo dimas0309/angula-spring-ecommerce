@@ -1,0 +1,70 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/favicon_icon.png" alt="dagtech"
+        class="img-responsive">
+  </a>
+
+  <button class="navbar-toggler" type="button" 
+          (click)="toggleNavBar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <!-- navbar options -->
+  <div class="collapse navbar-collapse"
+       [ngClass]="{'show': navbarOpen}">
+
+       <div class="row">
+         <div class="col">
+           <a routerLink="" routerLinkActive="active-link"
+              style="color: white">
+              Home
+          </a>
+       </div>
+
+        <div class="col">
+          <a routerLink="about" routerLinkActive="active-link"
+             style="color: white">
+             About
+         </a>
+       </div>
+
+         <div class="col">
+          <div class="dropdown">
+            <a class="btn btn-primary"
+               style="color: white" 
+               (mouseover)="toggleProduct()">
+                Products
+           </a>
+                  
+            <ul class="dropdown-menu" 
+                aria-labelledby="dropdownMenuLink"
+                [ngClass]="{'show': productOpen}">
+
+              <li *ngFor="let categories of productCategories">
+                <a routerLink="/category/{{categories.id}}"
+                   routerLinkActive="active-link">
+                   {{categories.categoryName}}
+               </a>
+            </li>  
+          </ul>
+        </div>
+      </div>
+         
+      <app-search></app-search>
+      
+         <div class="col">
+           <a routerLink="contact" routerLinkActive="active-link"
+              style="color: white">
+              Contact
+          </a>
+       </div>
+
+      <app-cart-status></app-cart-status>
+        
+    </div>
+    
+  </div>
+</nav>
+ 
+<router-outlet></router-outlet>
